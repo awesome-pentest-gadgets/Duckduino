@@ -1,5 +1,5 @@
 #Duckuino
-##Live version here: 
+##Live version here: https://netfr13nd.github.io/Duckduino/
 DuckyScript -> Arduino converter/compiler + HID mouse emulation.
 
 ```diff
