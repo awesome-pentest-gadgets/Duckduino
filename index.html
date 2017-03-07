@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang=en>
+	<head>
+		<title>Duckuino</title>
+		<meta charset="utf-8">
+	   <meta name="viewport" content="width=device-width, initial-scale=1">
+	   <link rel="shortcut icon" href="img/ico.png" type="image/x-icon">
+	   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/codemirror/CodeMirror/master/lib/codemirror.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.19.0/theme/monokai.css">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.19.0/codemirror.js"></script>
+        <script type="text/javascript" src="https://cdn.rawgit.com/codemirror/CodeMirror/master/mode/clike/clike.js"></script>
+        <script type="text/javascript" src="https://cdn.rawgit.com/codemirror/CodeMirror/master/mode/vbscript/vbscript.js"></script>
+        <style type="text/css">
+        	#console,#console-head{
+        		background-color: #eeeeee;
+        		padding: 5px;
+        		border: solid 1px; 
+        		border-color: #cacaca;
+        	}
+        	#console{
+        		font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+        	}
+        </style>
+	</head>
+	<body>
+	<div class="container">
+		<div class="navbar form-inline">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="https://d4n5h.github.io/Duckuino/">Duckuino</a>
+		      <button type="button" class="btn btn-success navbar-btn" id="compileThis">&#9658; Run Compiler</button>
+		      <input type="text" value="Payload_Name" class="form-control" id="payloadName"/>
+		      <button type="button" class="btn btn-primary navbar-btn" id="download"><span class="glyphicon glyphicon-download-alt"></span> Download Payload</button>
+		      <button class="btn btn-default navbar-btn"><a href="https://github.com/hak5darren/USB-Rubber-Ducky/wiki/Payloads" target="_blank"><span class="glyphicon glyphicon-folder-open
+"></span> Hak5 Payloads</button></a>
+		      <button class="btn btn-default navbar-btn"><a href="https://github.com/d4n5h/Duckuino/blob/master/README.md" target="_blank"><span class="glyphicon glyphicon-info-sign
+"></span> Documentation</button></a>
+		    </div>
+		</div>
+		<div class="row text-center">
+			<strong>NOTE:</strong> This compiler is dependent on <a href="https://github.com/NicoHood/HID">NicoHood's HID</a>.<br/>You need to add it to the Arduino IDE Library.
+		</div>
+		<div class="row">
+			<div class="col-xs-6">
+				<label for="duckyScript"><h3>Ducky Script</h3></label>
+				<br/>
+				<textarea id="duckyScript" style="width: 100%; height: 300px;" autofocus></textarea>
+			</div>
+			<div class="col-xs-6">
+				<label for="arduinoout"><h3>Arduino</h3></label><br/>
+				<textarea readonly id="arduiCode" style="width: 100%;"></textarea>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row" id="console-head">
+				Console:
+				<div id="console" style="width: 100%;">&nbsp;</div>
+			</div>
+		</div>
+		<hr/>
+		<div class="row text-center">Made with <span class="glyphicon glyphicon-heart
+"></span> by <a href="https://github.com/d4n5h" target="_blank">d4n5h</a></div>
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script src="js/Duckuino.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
